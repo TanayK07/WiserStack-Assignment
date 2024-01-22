@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	Text,
 	Flex,
@@ -9,11 +9,27 @@ import {
 	Button,
 } from "@chakra-ui/react";
 import "@fontsource/Inter"; // import the font
+import "@fontsource/Montserrat";
+import { useNavigate } from "react-router-dom";
 //import image
 import BackgroundImage from "../assets/img/background_home.png";
 import Logo from "../assets/img/logo.png";
 
 export default function Home() {
+	const navigate = useNavigate();
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+
+	const validateForm = () => {
+		const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+		const passwordRegex = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
+		if (emailRegex.test(email) && passwordRegex.test(password)) {
+			navigate("/event");
+		} else {
+			alert("Invalid email or password");
+		}
+	};
 	return (
 		<>
 			<Flex
@@ -38,7 +54,7 @@ export default function Home() {
 						pb={8}
 					>
 						<Image src={Logo} alt="Logo" />
-						<Text fontFamily="Montserrat, sans-serif" fon fontStyle="bold">
+						<Text fontFamily="Montserrat, sans-serif" fontStyle="bold">
 							WiserStack
 						</Text>
 					</HStack>
@@ -59,18 +75,21 @@ export default function Home() {
 							<Input
 								borderRadius={30}
 								type="email"
-								placeholder="Enter your email"
+								placeholder="abc@work.com"
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
 							></Input>
 						</Flex>
 						<Flex w="100%" align="start" direction="column">
 							<Text my={1} fontFamily="Inter, sans-serif">
-								{" "}
 								Password
 							</Text>
 							<Input
 								borderRadius={30}
 								type="password"
 								placeholder="Enter your password"
+								value={password}
+								onChange={(e) => setPassword(e.target.value)}
 							></Input>
 							<Text
 								fontSize={12}
@@ -80,8 +99,12 @@ export default function Home() {
 								Forgot Password?
 							</Text>
 						</Flex>
-
-						<Button w="100%" borderRadius={"30"} bgColor={"#090E82"}>
+						<Button
+							w="100%"
+							borderRadius={"30"}
+							bgColor={"#090E82"}
+							onClick={validateForm}
+						>
 							<Text color={"white"} fontFamily="Inter, sans-serif">
 								Sign In
 							</Text>
