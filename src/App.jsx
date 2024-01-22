@@ -13,6 +13,7 @@ function App() {
 				alignItems: "center",
 				justifyContent: "center",
 				overflow: "hidden",
+				fontFamily: "inter",
 			}}
 		>
 			<ChakraProvider>

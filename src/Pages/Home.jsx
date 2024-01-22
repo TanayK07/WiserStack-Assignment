@@ -8,6 +8,7 @@ import {
 	Input,
 	Button,
 } from "@chakra-ui/react";
+import "@fontsource/Inter"; // import the font
 //import image
 import BackgroundImage from "../assets/img/background_home.png";
 import Logo from "../assets/img/logo.png";
@@ -37,14 +38,24 @@ export default function Home() {
 						pb={8}
 					>
 						<Image src={Logo} alt="Logo" />
-						<Text>WiserStack</Text>
+						<Text fontFamily="Montserrat, sans-serif" fon fontStyle="bold">
+							WiserStack
+						</Text>
 					</HStack>
 
-					<Text> Welcome Back</Text>
-					<Text>Enter your Details</Text>
+					<Text
+						fontSize={32}
+						textColor={"#121212"}
+						fontFamily="Inter, sans-serif"
+					>
+						Welcome Back
+					</Text>
+					<Text fontFamily="Inter, sans-serif">Enter your Details</Text>
 					<VStack w={["90%", "80%", "70%"]}>
 						<Flex w="100%" align="start" direction="column">
-							<Text my={1}> Email</Text>
+							<Text my={1} fontFamily="Inter, sans-serif">
+								Email
+							</Text>
 							<Input
 								borderRadius={30}
 								type="email"
@@ -52,23 +63,34 @@ export default function Home() {
 							></Input>
 						</Flex>
 						<Flex w="100%" align="start" direction="column">
-							<Text my={1}> Password</Text>
+							<Text my={1} fontFamily="Inter, sans-serif">
+								{" "}
+								Password
+							</Text>
 							<Input
 								borderRadius={30}
 								type="password"
 								placeholder="Enter your password"
 							></Input>
-							<Text fontSize={12} alignSelf="flex-end">
+							<Text
+								fontSize={12}
+								alignSelf="flex-end"
+								fontFamily="Inter, sans-serif"
+							>
 								Forgot Password?
 							</Text>
 						</Flex>
 
 						<Button w="100%" borderRadius={"30"} bgColor={"#090E82"}>
-							<Text color={"white"}>Sign In</Text>
+							<Text color={"white"} fontFamily="Inter, sans-serif">
+								Sign In
+							</Text>
 						</Button>
 					</VStack>
 
-					<Text>Don't have an account? Sign Up</Text>
+					<Text fontFamily="Inter, sans-serif">
+						Don't have an account? Sign Up
+					</Text>
 				</VStack>
 			</Flex>
 		</>
