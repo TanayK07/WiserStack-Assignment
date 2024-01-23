@@ -22,7 +22,12 @@ function Navbar() {
 				spacing={2}
 			>
 				<Image src={Logo} alt="Logo" />
-				<Text fontFamily="Montserrat, sans-serif" fontStyle="bold">
+				<Text
+					fontFamily={"heading"}
+					fontWeight={600}
+					fontSize={18}
+					color={"#090E82"}
+				>
 					WiserCount
 				</Text>
 			</HStack>
@@ -32,6 +37,13 @@ function Navbar() {
 				bgColor={"#ECEDFF"}
 				textColor={"#090E82"}
 				placeholder="RecentEventID"
+				fontFamily={"body"}
+				_placeholder={{
+					color: "#090E82",
+					fontSize: 14,
+					fontFamily: "body",
+					fontWeight: 500,
+				}}
 			></Input>
 			<HStack
 				justifyContent={"center"}
@@ -40,18 +52,10 @@ function Navbar() {
 			>
 				<Image boxSize={8} src={Profile_Sample} alt="Profile_Sample" />
 				<VStack align={"flex-start"} justifyContent={"flex-start"} spacing={0}>
-					<Text
-						fontSize={16}
-						fontFamily="Montserrat, sans-serif"
-						fontStyle="bold"
-					>
+					<Text fontSize={14} fontFamily="body" fontWeight={600}>
 						Test User
 					</Text>
-					<Text
-						fontSize={12}
-						fontFamily="Montserrat, sans-serif"
-						fontStyle="regular"
-					>
+					<Text fontSize={11} fontFamily="body" fontWeight={400}>
 						abc@test.com
 					</Text>
 				</VStack>

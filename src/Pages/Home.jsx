@@ -54,39 +54,56 @@ export default function Home() {
 						pb={8}
 					>
 						<Image src={Logo} alt="Logo" />
-						<Text fontFamily="Montserrat, sans-serif" fontStyle="bold">
-							WiserStack
+						<Text
+							textColor={"#090E82"}
+							fontFamily={"heading"}
+							fontWeight={600}
+							fontStyle="bold"
+						>
+							WiserCount
 						</Text>
 					</HStack>
 
 					<Text
 						fontSize={32}
 						textColor={"#121212"}
-						fontFamily="Inter, sans-serif"
+						fontFamily={"body"}
+						fontWeight={600}
 					>
 						Welcome Back
 					</Text>
-					<Text fontFamily="Inter, sans-serif">Enter your Details</Text>
+					<Text
+						fontSize={16}
+						color={"#6A6A6A"}
+						fontFamily={"body"}
+						fontWeight={500}
+					>
+						Enter your Details
+					</Text>
 					<VStack w={["90%", "80%", "70%"]}>
 						<Flex w="100%" align="start" direction="column">
-							<Text my={1} fontFamily="Inter, sans-serif">
+							<Text my={1} fontSize={14} fontFamily={"body"} fontWeight={500}>
 								Email
 							</Text>
 							<Input
 								borderRadius={30}
 								type="email"
+								fontFamily={"body"}
+								fontWeight={400}
 								placeholder="abc@work.com"
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
 							></Input>
 						</Flex>
 						<Flex w="100%" align="start" direction="column">
-							<Text my={1} fontFamily="Inter, sans-serif">
+							<Text my={1} fontSize={14} fontFamily={"body"} fontWeight={500}>
 								Password
 							</Text>
 							<Input
 								borderRadius={30}
 								type="password"
+								fontFamily={"body"}
+								fontWeight={400}
 								placeholder="Enter your password"
 								value={password}
 								onChange={(e) => setPassword(e.target.value)}
@@ -94,7 +111,8 @@ export default function Home() {
 							<Text
 								fontSize={12}
 								alignSelf="flex-end"
-								fontFamily="Inter, sans-serif"
+								fontFamily={"body"}
+								fontWeight={400}
 							>
 								Forgot Password?
 							</Text>
@@ -105,13 +123,13 @@ export default function Home() {
 							bgColor={"#090E82"}
 							onClick={validateForm}
 						>
-							<Text color={"white"} fontFamily="Inter, sans-serif">
+							<Text color={"white"} fontFamily={"body"} fontWeight={400}>
 								Sign In
 							</Text>
 						</Button>
 					</VStack>
 
-					<Text fontFamily="Inter, sans-serif">
+					<Text py={8} fontFamily={"body"} fontWeight={400}>
 						Don't have an account? Sign Up
 					</Text>
 				</VStack>

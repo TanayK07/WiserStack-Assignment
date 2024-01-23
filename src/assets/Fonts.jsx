@@ -14,12 +14,50 @@ const Fonts = () => (
 
             @font-face {
                 font-family: 'Inter';
+                src: url('Inter-Medium.woff2') format('woff2'),
+                    url('Inter-Medium.woff') format('woff'),
+                    url('Inter-Medium.ttf') format('truetype');
+                font-weight: 500;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'Inter';
+                src: url('Inter-SemiBold.woff2') format('woff2'),
+                    url('Inter-SemiBold.woff') format('woff'),
+                    url('Inter-SemiBold.ttf') format('truetype');
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'Inter';
                 src: url('Inter-Bold.woff2') format('woff2'),
                     url('Inter-Bold.woff') format('woff'),
                     url('Inter-Bold.ttf') format('truetype');
                 font-weight: 700;
                 font-style: normal;
             }
+
+            @font-face {
+                font-family: 'Inter';
+                src: url('Inter-ExtraBold.woff2') format('woff2'),
+                    url('Inter-ExtraBold.woff') format('woff'),
+                    url('Inter-ExtraBold.ttf') format('truetype');
+                font-weight: 800;
+                font-style: normal;
+            }
+
+            @font-face {   
+                font-family: 'Inter';
+                src: url('Inter-Black.woff2') format('woff2'),
+                    url('Inter-Black.woff') format('woff'),
+                    url('Inter-Black.ttf') format('truetype');
+                font-weight: 900;
+                font-style: normal;
+            }
+
+            
 
             @font-face {
                 font-family: 'Montserrat';
@@ -32,10 +70,43 @@ const Fonts = () => (
 
             @font-face {
                 font-family: 'Montserrat';
+                src: url('Montserrat-Medium.woff2') format('woff2'),
+                    url('Montserrat-Medium.woff') format('woff'),
+                    url('Montserrat-Medium.ttf') format('truetype');
+                font-weight: 500;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Montserrat';
+                src: url('Montserrat-SemiBold.woff2') format('woff2'),
+                    url('Montserrat-SemiBold.woff') format('woff'),
+                    url('Montserrat-SemiBold.ttf') format('truetype');
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'Montserrat';
                 src: url('Montserrat-Bold.woff2') format('woff2'),
                     url('Montserrat-Bold.woff') format('woff'),
                     url('Montserrat-Bold.ttf') format('truetype');
                 font-weight: 700;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Montserrat';
+                src: url('Montserrat-ExtraBold.woff2') format('woff2'),
+                    url('Montserrat-ExtraBold.woff') format('woff'),
+                    url('Montserrat-ExtraBold.ttf') format('truetype');
+                font-weight: 800;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Montserrat';
+                src: url('Montserrat-Black.woff2') format('woff2'),
+                    url('Montserrat-Black.woff') format('woff'),
+                    url('Montserrat-Black.ttf') format('truetype');
+                font-weight: 900;
                 font-style: normal;
             }
         `}
