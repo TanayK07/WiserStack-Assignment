@@ -44,7 +44,7 @@ export default function Home() {
 				<VStack
 					w={["100vw", "100vw", "50vw"]}
 					h="100vh"
-					backgroundColor="green"
+					//	backgroundColor="green"
 				>
 					<HStack
 						h="100vs"

@@ -6,16 +6,21 @@ import Profile_Sample from "../assets/img/profile_sample.png";
 function Navbar() {
 	return (
 		<Flex
-			bgColor={"green"}
-			py={2}
-			backgroundColor={"black"}
+			//bgColor={"green"}
+			pt={4}
+			pb={2}
+			//backgroundColor={"black"}
 			px={18}
 			justifyContent="space-between"
 			alignItems="center"
-			width="100%"
+			//width="100%"
 			minWidth={"100%"}
 		>
-			<HStack w="20%" bgColor={"purple"} spacing={2}>
+			<HStack
+				w="20%"
+				// bgColor={"purple"}
+				spacing={2}
+			>
 				<Image src={Logo} alt="Logo" />
 				<Text fontFamily="Montserrat, sans-serif" fontStyle="bold">
 					WiserCount
@@ -28,7 +33,11 @@ function Navbar() {
 				textColor={"#090E82"}
 				placeholder="RecentEventID"
 			></Input>
-			<HStack justifyContent={"center"} w="25%" bgColor="gray">
+			<HStack
+				justifyContent={"center"}
+				w="25%"
+				//bgColor="gray"
+			>
 				<Image boxSize={8} src={Profile_Sample} alt="Profile_Sample" />
 				<VStack align={"flex-start"} justifyContent={"flex-start"} spacing={0}>
 					<Text
