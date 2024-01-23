@@ -1,4 +1,12 @@
-import { Text, Flex, VStack, Button, useMediaQuery } from "@chakra-ui/react";
+import {
+	Text,
+	Flex,
+	VStack,
+	Button,
+	useMediaQuery,
+	Image,
+} from "@chakra-ui/react";
+import ellipse_icon from "../assets/img/icon/ellipse_icon.png";
 
 function EventBox() {
 	const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
@@ -36,13 +44,35 @@ function EventBox() {
 					>
 						Suarabh's Birthday Party
 					</Text>
-					<Text
-						fontSize={isLargerThan768 ? 16 : 10}
-						fontFamily={"body"}
-						fontWeight={500}
-					>
-						HappyDreams Hotel || Hall 5 || New Delhi
-					</Text>
+
+					{!isLargerThan768 ? (
+						<Text
+							fontSize={isLargerThan768 ? 16 : 10}
+							fontFamily={"body"}
+							fontWeight={500}
+						>
+							HappyDreams Hotel || Hall 5 || New Delhi
+						</Text>
+					) : (
+						<Flex
+							flexDir={["column", "column", "row"]}
+							justifyContent={"space-between"}
+							w="80%"
+							align={"center"}
+						>
+							<Text fontSize={[8, 8, 16]} fontFamily={"body"} fontWeight={500}>
+								HappyDreams Hotel
+							</Text>
+							<Image src={ellipse_icon} alt="ellipse icon" />
+							<Text fontSize={[8, 8, 16]} fontFamily={"body"} fontWeight={500}>
+								Hall 5
+							</Text>
+							<Image src={ellipse_icon} alt="ellipse icon" />
+							<Text fontSize={[8, 8, 16]} fontFamily={"body"} fontWeight={500}>
+								New Delhi
+							</Text>
+						</Flex>
+					)}
 				</VStack>
 
 				{isLargerThan768 && (

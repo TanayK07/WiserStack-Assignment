@@ -1,5 +1,4 @@
-import React from "react";
-import { Text, Box, HStack, Flex, VStack } from "@chakra-ui/react";
+import { Box, HStack, Flex, VStack } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import EventBox from "../components/EventBox";
 import CardBox from "../components/CardBox";
@@ -11,7 +10,6 @@ import { useMediaQuery } from "@chakra-ui/react";
 
 export default function Event() {
 	const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
-	const [isLargerThan1024] = useMediaQuery("(min-width: 1025px)");
 
 	return (
 		<Flex
