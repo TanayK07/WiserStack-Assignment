@@ -8,14 +8,18 @@ import {
 	Input,
 	Button,
 } from "@chakra-ui/react";
-import "@fontsource/Inter"; // import the font
+import "@fontsource/Inter";
 import "@fontsource/Montserrat";
 import { useNavigate } from "react-router-dom";
-//import image
+import { useMediaQuery } from "@chakra-ui/react";
+
 import BackgroundImage from "../assets/img/background_home.png";
 import Logo from "../assets/img/logo.png";
 
 export default function Home() {
+	const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
+	const [isLargerThan1024] = useMediaQuery("(min-width: 1025px)");
+
 	const navigate = useNavigate();
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
@@ -39,13 +43,9 @@ export default function Home() {
 				h="100vh"
 				w="100vw"
 			>
-				<Image src={BackgroundImage} alt="Logo" />
+				{isLargerThan1024 && <Image src={BackgroundImage} alt="Logo" />}
 
-				<VStack
-					w={["100vw", "100vw", "50vw"]}
-					h="100vh"
-					//	backgroundColor="green"
-				>
+				<VStack spacing={[10, 0, 0]} w={["100%", "100%", "50vw"]} h="100vh">
 					<HStack
 						h="100vs"
 						justifyContent={"center"}
