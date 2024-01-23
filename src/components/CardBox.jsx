@@ -19,11 +19,11 @@ function CardBox() {
 				justifyContent="space-between"
 				alignItems="flex-start"
 			>
-				<Text fontSize={20} fontFamily={"body"} fontWeight={500}>
+				<Text fontSize={[16, 20]} fontFamily={"body"} fontWeight={500}>
 					Camera Setup
 				</Text>
 				<Text
-					fontSize={14}
+					fontSize={[10, 14]}
 					color={"#7D7D7D"}
 					fontFamily={"body"}
 					fontWeight={500}
