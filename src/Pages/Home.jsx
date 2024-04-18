@@ -8,7 +8,8 @@ import {
 	Input,
 	Button,
 } from "@chakra-ui/react";
-
+import "@fontsource/Inter";
+import "@fontsource/Montserrat";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "@chakra-ui/react";
 
